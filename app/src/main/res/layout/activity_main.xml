@@ -1,50 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="100dp">
+    tools:context=".MainActivity">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/moviesLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World !"
-        android:layout_centerInParent="true"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:textColor="#1dd12c"
-        android:id="@+id/welcomeText"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:layout_below="@+id/welcomeText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:id="@+id/submitBtn"
-        />
+        android:layout_marginTop="10dp">
 
-    <EditText
+        <CheckBox
+            android:id="@+id/checkBoxHP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Harry Potter" />
+
+        <CheckBox
+            android:id="@+id/checkBoxFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/checkBoxHP"
+            android:checked="false"
+            android:text="Fast and Furious" />
+
+        <CheckBox
+            android:id="@+id/checkBoxMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/checkBoxFF"
+            android:checked="true"
+            android:text="Mission Impossible" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/moviesLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/radioGroupMaritalStatus"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioMarried"
+            android:checked="true"
+            android:text="Married" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioUnMarried"
+            android:checked="false"
+            android:text="UnMarried"
+            android:layout_marginLeft="15dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioSeparated"
+            android:checked="false"
+            android:text="Separated"
+            android:layout_marginLeft="15dp"/>
+    </RadioGroup>
+
+    <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
         android:layout_centerInParent="true"
-        android:id="@+id/editText"
-        android:layout_below="@+id/submitBtn"
-        android:textStyle="italic"
-        android:layout_marginTop="25dp"
+        android:id="@+id/progressBar"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progress="20"
+        android:max="100"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editBoxLabel"
-        android:layout_below="@id/editText"
-        android:textColor="@android:color/holo_red_dark"
-        android:layout_marginTop="25dp" />
 
 </RelativeLayout>
