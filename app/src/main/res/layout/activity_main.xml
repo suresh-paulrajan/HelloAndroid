@@ -6,81 +6,51 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:id="@+id/moviesLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp">
+        android:id="@+id/firstRelativeLayout"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true">
 
-        <CheckBox
-            android:id="@+id/checkBoxHP"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Harry Potter" />
+            android:text="First Name"
+            android:id="@+id/firstNameText" />
 
-        <CheckBox
-            android:id="@+id/checkBoxFF"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/checkBoxHP"
-            android:checked="false"
-            android:text="Fast and Furious" />
+            android:text="Last Name"
+            android:id="@+id/lastNameText"
+            android:layout_toRightOf="@+id/firstNameText"
+            android:layout_marginLeft="10dp"/>
 
-        <CheckBox
-            android:id="@+id/checkBoxMI"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/checkBoxFF"
-            android:checked="true"
-            android:text="Mission Impossible" />
+            android:text="Email"
+            android:id="@+id/emailText"
+            android:layout_toRightOf="@+id/lastNameText"
+            android:layout_marginLeft="10dp"/>
 
     </RelativeLayout>
 
-    <RadioGroup
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/moviesLayout"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/radioGroupMaritalStatus"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioMarried"
-            android:checked="true"
-            android:text="Married" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioUnMarried"
-            android:checked="false"
-            android:text="UnMarried"
-            android:layout_marginLeft="15dp"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioSeparated"
-            android:checked="false"
-            android:text="Separated"
-            android:layout_marginLeft="15dp"/>
-    </RadioGroup>
-
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:text="Hello World !"
         android:layout_centerInParent="true"
-        android:id="@+id/progressBar"
-        android:visibility="visible"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:progress="20"
-        android:max="100"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        />
+        android:id="@+id/txtHello"
+        android:layout_below="@+id/firstRelativeLayout"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Greet"
+        android:id="@+id/btnGreet"
+        android:layout_below="@+id/txtHello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
 
 </RelativeLayout>
